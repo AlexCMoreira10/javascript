@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Programa</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background-color: grey
+        }
+        h1 {
+            background-color: lightblue;
+            padding:10px
+            a
+        }
+        p {
+            color: white;
+            padding: 10px;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Olá mundo!</h1>
+    <h2><span class="n1"></span> + <span class="n2"></span> = <span class="s"></span></h2> 
+    <script>
+        var n1 = Number.parseFloat(window.prompt('Digite um numero: '))
+        var n2 = Number.parseFloat(window.prompt('Digite outro numero: '))
+        document.querySelector('span.n1').innerText = n1
+        document.querySelector('span.n2').innerText = n2
+        var s = n1 + n2
+        document.querySelector('span.s').innerText = String(s)
+    </script>
+</body>
+</html>
