@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background-color: lightblue;
+            color: rgb(82, 82, 82);
+            font-family: Arial, Helvetica, sans-serif ;
+            font-size: 15pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Resultado logo a baixo</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <p name="nome0">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam aspernatur aut tenetur! Nesciunt eius deserunt officiis, sint quidem mollitia culpa consectetur nemo vero asperiores. Soluta pariatur odit eveniet ut ab.
+    </p>
+    <div id="msg">Click em Mim</div>
+
+    <script>
+        window.document.write('Mudei para DOM <br>')
+        window.document.writeln(window.document.URL) //window.navigator.appName
+        var p1 = window.document.getElementsByTagName('p')[1]
+        p1.style.color = 'blue'
+        p1.style.fontFamily = 'Courier New'
+        //window.alert(p1.innerText) //innerText pega o texto Já innerHTML vai mostrar todo o codigo html
+        var id = window.document.getElementById('msg')
+        id.style.color = 'red' //peguei o ID da tag e usei para mudar a cor da div
+        //d.innerText = 'estou aguardando'
+        window.document.getElementById('msg').innerText = 'interessante'
+        var ab = window.document.getElementsByName('nome0')[0] //selecionando por nome
+        ab.style.visibility = 'hidden'
+    </script>
+</body>
+</html>
