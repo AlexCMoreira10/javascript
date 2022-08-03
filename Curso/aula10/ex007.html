@@ -5,15 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somando Valores</title>
+    <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
-    <h1>Somando Valores</h1>
-    <input type="number" name="txtn1" id="txtn1"> +
-    <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="somar" onclick="somar()">
-    <input type="button" value="divisão" onclick="divisão()">
+    <!-- foi minha primeira tentantiva de fazer uma calculadora-->
+    <!-- para quem começou a estudar a  1 semana acho que estou indo bem :) -->
+    <main class="calculadora">
     
-    <div id="resultado">Resultado</div>
+        <h1>Calculadora simples</h1>
+        <div id="tela">
+            <input type="number" name="txtn1" id="txtn1"> ?
+            <input type="number" name="txtn2" id="txtn2">
+        </div>
+        <div id="Operação" class="botões">
+            <button type="button" value="+" onclick="somar()">+</button>
+            <button type="button" value="-" onclick="sub()">-</button>
+            <button type="button" value="/" onclick="divisão()"> / </button>
+            <button type="button" value="*" onclick="mult()"> * </button>
+        </div>
+        <div id="numeros" class="botões">
+            <button type="button" value="*" onclick="">1</button>
+            <button type="button" value="*" onclick="">2</button>
+            <button type="button" value="*" onclick="">3</button>
+            <button type="button" value="*" onclick="">4</button>
+            <button type="button" value="*" onclick="">5</button>
+            <button type="button" value="*" onclick="">6</button>
+            <button type="button" value="*" onclick="">7</button>
+            <button type="button" value="*" onclick="">8</button>
+            <button type="button" value="*" onclick="">9</button>
+            <button type="button" value="*" onclick="">0</button>
+        </div>
+
+    
+        <div id="resultado">Resultado</div>
+    </main>
 
     <script>
         var tn1 = window.document.getElementById('txtn1')
@@ -32,9 +57,24 @@
             
             var n1 = Number.parseFloat(tn1.value)
             var n2 = Number.parseFloat(tn2.value)
-            var s = n1 / n2
-            res.innerHTML = `A divisão entre ${n1} e ${n2} é igual a ${s}`
+            var div = n1 / n2 
+            res.innerHTML = `A multiplicação entre ${n1} e ${n2} é igual a ${div}`
+            
         }  
+
+        function mult() {
+            var n1 = Number.parseFloat(tn1.value)
+            var n2 = Number.parseFloat(tn2.value)
+            var mul = n1 * n2
+            res.innerHTML = `A divisão de ${n1} por ${n2} é igual a ${mul}`
+        }
+        
+        function sub() {
+            var n1 = Number.parseFloat(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1-n2
+            res.innerHTML = `a subibtração de ${n1} por ${n2} é igual a ${s} `
+        }
 
     </script>
 </body>
