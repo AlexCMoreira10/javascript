@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div#area {
+            background-color: green;
+        
+            width: 200px;
+            height: 200px;
+
+            margin-top: 15px;
+            margin-left: 15px;
+
+            text-align: center;
+            line-height: 200px;
+            color: white;
+            font-size: 1.5em;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div id="area">
+        interaja...
+    </div>
+
+    <script>
+            var area = window.document.getElementById('area')
+            area.addEventListener('click', clicar)
+            area.addEventListener('mouseenter', entrar)
+            area.addEventListener('mouseout', sair)
+
+        function clicar() {
+            //tudo que esta aqui dentro só vai funcionar quando eu chamar o metodo clicar
+            area.innerText = 'Clicou!'
+            area.style.background = 'pink'
+        }
+
+        function entrar() {
+            area.innerText =  'Dentro'
+            
+        }
+
+        function sair() {
+            area.innerText = 'Saiu'
+            area.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
