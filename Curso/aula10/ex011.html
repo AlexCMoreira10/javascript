@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Checagem de Nacionalidade</h1>
+    <p>País: 
+        <input type="text" name="aaa05" id="aa005"> 
+        <input type="button" value="Checagem"  onclick="checagem1()">
+    </p>
+    <div id="resp"></div>
+
+    <script>
+
+        function checagem1() {
+        var nacio = window.document.getElementById('aa005').value.toUpperCase();
+    
+        var res = window.document.getElementById('resp')
+        res.innerHTML = `<p>Teste de ${nacio}</p>`
+            
+        if (nacio =='BRASIL') {
+            res.innerHTML = 'Brasileiro'
+        } else if (nacio == 'USA' || nacio == 'PORTUGAL'){
+            res.innerHTML =`Tem muito de vcs aqui`
+        } else {
+            res.innerHTML =`Estrangeiro qualquer do ${nacio}`
+        }
+        
+        }
+        
+    </script>
+</body>
+</html>
