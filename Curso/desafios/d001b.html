@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> -Desafio 2- </title>
+</head>
+<body>
+    <!--Desafio que me propus a fazer com os conhecimento atuais em JavaScript-->
+    <!-- vamos fazer uma calculadora para saber quando a pessoa nasceu-->
+    
+    <h1>Calcular sua idade apartir do ano que nasceu</h1>
+    <!-- Input de entrada do dado de nascimento -->
+    <p>Em qual ano você Nasceu ? 
+        <input type="number" name="ano" id="ano">
+    <!--Botão para entrada da função no javaScript-->
+        <input type="button" value="calcular" onclick="calc()"> <br>
+    <!--Saída do dado com a conta feita-->
+        <span id="idade"></span> <br>
+    
+    </p>
+
+    <script>
+        function calc() {
+            var idade = document.getElementById('ano')
+            var idadeC = Number.parseFloat(ano.value)
+            var solução = document.getElementById('idade')
+            var cont = 2022 - idadeC
+            
+
+            solução.innerHTML += `você tem <strong>${cont}</strong> de idade <br> `
+            
+            if (idadeC >= 18) {
+                solução.innerHTML += 'Você já é maior de idade'
+            } else {
+                solução.innerHTML += 'Você ainda não atingiu a maioridade <br>'
+            }
+
+        }
+
+    </script>
+</body>
+</html>
