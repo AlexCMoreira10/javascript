@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Conta</title>
+</head>
+<body>
+    <p>Coloque a sua idade <input type="number" name="data" id="data" id="data"> 
+    <input type="button" value="Calcular" onclick="calcular()"></p> 
+    <p class="idade">você nasceu em <div id="nasceu"></div></p>
+    
+    <script>
+        
+        function calcular() {
+            var data = document.getElementById('data')
+            var nas2 = Number.parseFloat(data.value)
+            var resultado = 2022 - nas2
+            nasceu = document.getElementById('nasceu')
+            
+            
+            nasceu.innerHTML += `Você nasceu em ${resultado}<br>`
+        }
+    </script>
+</body>
+
+</html>
