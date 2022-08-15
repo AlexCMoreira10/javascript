@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Solo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Desafio da aulas 12, apenas com a referencia visual de como tem que ficar!-->
+    <header>
+        <h1>Verificar dor de Idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                <label for="nascimento">Data de nascimento</label>
+                <input type="number" name="nascimento" id="nascimento" min=1900>
+            </p>
+            <p>
+                <input type="radio" name="gen" id="masculino" checked>
+                <label for="masculino">Homem</label>
+                <input type="radio" name="gen" id="feminino">
+                <label for="feminino">Mulher</label>
+            </p>
+            <p>
+                <button id="verificar" onclick="verificar()">verificar</button>
+            </p>
+        </div>
+        <div class="res">
+            <p>Preencha os dados para ver o resultado</p>
+        </div>
+    </section>
+    <footer>
+        <p>Feito por ALEX</p>
+    </footer>
+
+    <script src="desafio.js">
+
+    </script>
+</body>
+</html>
