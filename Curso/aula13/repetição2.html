@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="contador" id="valor" min="0" max="20">
+    <button onclick="okey()">Okey</button>
+    <span id="contador">Contador</span>
+    
+    <script>
+        function okey() {
+            var cont = 0
+            var valor = window.document.querySelector('input#valor')
+            var contador = window.document.querySelector('span#contador')
+            var valorC = Number(valor.value)
+            if (cont <= valorC) {
+                while (cont <= valorC) {
+                    contador.innerHTML += `Contado ${cont} <br>`
+                    cont++
+                
+                }
+            } else if (cont > valorC) {
+                while(cont >= valorC) {
+                   contador.innerHTML += `Contado ${cont} <br>`
+                    cont--
+             }
+            }
+
+        }
+    </script>
+</body>
+</html>
