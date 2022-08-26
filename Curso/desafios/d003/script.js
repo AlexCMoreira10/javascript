@@ -13,6 +13,7 @@ function testar() {
 
     if (l1 <= l2+l3 && l2 <= l1+l3 && l3 <= l2 + l1) {
         res.innerHTML += 'É possivel Formar um triangulo <br>'
+        imagem.src = 'imagem/Quest.jpg'
         if (l1 ==l2 && l2 == l3) {
             //Equilatero
             imagem.src = 'imagem/equilatero.jpg'
