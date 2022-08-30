@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Adivinhação</title>
+</head>
+<body>
+    <h1>Adivinhar</h1>
+    <p>Selecionamos um número aleatório entre 1 e 100. Veja se consegue adivinhar em 10 chances ou menos. Nós lhe diremos se seu palpite está com valor alto ou baixo.</p>
+
+
+    <label for="campoPalpite">Digite seu Palpite</label>
+    <input type="number" name="txtcampopalpite" id="campoPalpite" class="campoPalpite">
+    <input type="submit" value="Enviar Palpite" class="envioPalpite" onclick="conferirPalpite()">
+
+    <p class="palpites"></p>
+    <p class="ultimoResultado"></p>
+    <p class="baixoOuAlto"></p>
+    
+    <script src="adivinhar2.js"></script>
+</body>
+</html>
