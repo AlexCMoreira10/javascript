@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+        <h1>addEventListener</h1>
+        <p>
+            teste Simples passando o addEventListener
+        </p>
+
+
+        <label for="teste">Teste addEventListener</label>
+        <input type="submit" value="teste" class="teste">
+
+
+    <footer>
+        <p>Feito por alex</p>
+    </footer>
+    
+    <script>
+        var teste = document.querySelector('.teste')
+
+        function hello(){
+            window.alert('Olá, Mundo!')
+        }
+
+        teste.addEventListener('click', hello)
+    </script>
+
+</body>
+</html>
