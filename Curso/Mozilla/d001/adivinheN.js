@@ -1,4 +1,4 @@
-var numeroAleatorio = Math.floor(Math.random()*100)+1
+var numeroAleatorio = 50//Math.floor(Math.random()*100)+1
 //Input
 var campoPalpite = document.querySelector('.campoPalpite')
 var envioPalpite = document.querySelector('.envioPalpite')
@@ -8,8 +8,9 @@ var ultimoResultado = document.querySelector('.ultimoResultado')
 var baixoOuAlto = document.querySelector('baixoOuAlto')
 //Controle
 var contagemPalpites = 1
-var botaoReinicio
-
+var botaoReinicio = document.querySelector('#botaoReiniciar')
+//window.document.querySelector('#botaoReinicio').style.visibility = 'hidden'
+botaoReinicio.style.visibility = 'hidden'
 campoPalpite.focus()
 
 function conferirPalpite() {
@@ -55,9 +56,10 @@ envioPalpite.addEventListener('click',conferirPalpite)
 function fimDejogo() {
     campoPalpite.disabled = true
     envioPalpite.disabled = true
-    botaoReinicio = document.createElement('button')
+    botaoReinicio.style.visibility = 'visible'
+    /*botaoReinicio = document.createElement('button')
     botaoReinicio.textContent = 'Reiniciar'
-    document.body.appendChild(botaoReinicio)
+    document.body.appendChild(botaoReinicio)*/
     botaoReinicio.addEventListener('click', reiniciarJogo)
 }
 
@@ -72,7 +74,9 @@ function reiniciarJogo() {
     }
 
     //Remove o Botão
-    botaoReinicio.parentNode.RemoveChild(botaoReinicio)
+    //botaoReinicio.parentNode.RemoveChild(botaoReinicio)
+    botaoReinicio.style.visibility = 'hidden'
+    
     //Habilita o Campo e Envio de novo
     campoPalpite.disabled = false
     envioPalpite.disabled = false
@@ -82,5 +86,5 @@ function reiniciarJogo() {
     //Reseta a cor do campo Para branco
     ultimoResultado.style.backgroundColor = 'white'
     //Gera um novo Numero Aleatorio
-    numeroAleatorio = Math.floor(Math.random()*100)+1
+    numeroAleatorio = 50 //Math.floor(Math.random()*100)+1
 }
