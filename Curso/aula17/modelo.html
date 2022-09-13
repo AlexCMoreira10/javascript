@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Analisando Numeros</h1>
+    </header>
+    <section>
+        <p>escolha um numero entre 1 a 100</p>
+        <div>
+            <label for="adcNumero">Escolha um numero</label>
+            <input type="number" name="txtescolhaNumero" id="adcNumero" maxlength="max">
+            <input type="button" value="adicionar" id="botaoAdicioneNumero" onclick="adicionarNumero()">
+        </div>
+        <div>
+            <p id="adicionado"></p>
+            <input type="button" value="Resultado" onclick="resultado()">
+        </div>
+        <div id="txtresultado"></div>
+    </section>
+    <footer>
+        <p>Feito por alex</p>
+    </footer>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
