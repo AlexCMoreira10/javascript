@@ -18,12 +18,22 @@ section {
 
     padding: 15px;
 
-    width: 400px;
+    width: 500px;
     margin: auto;
 
     box-shadow: 5px 5px 10px rgba(90, 90, 90, 0.781);
 }
 
+input#fNum {
+    width: 100px;
+}
+label {
+    font-size: 0.8em;
+}
+
+select#flista {
+    width: 150px;
+}
 
 footer {
     text-align: center;
@@ -31,6 +41,3 @@ footer {
     font: italic;
 }
 
-select#flista {
-    width: 100px;
-}
