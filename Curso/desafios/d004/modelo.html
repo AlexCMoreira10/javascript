@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <!-- auto-desafio proposto
+            objetivo é criar um site que calcula a media dos alunos
+            e ordena as classificações
+        -->
+        <h1>Notas e Medias</h1>
+    </header>
+    <section>
+        <div>
+            <form action="atividade" method="post">
+                <label for="nome">Aluno : </label>
+                <input type="text" name="nome" id="nome" required> <br>
+                
+                <label for="nota1">Nota 1: </label> 
+                <input type="number" name="nota1" id="nota1" maxlength="2" max="10" min="0"required><br>
+                <label for="nota2">Nota 2: </label> 
+                <input type="number" name="nota2" id="nota2" maxlength="2" max="10" min="0"required> <br>
+
+                
+                <input type="radio" name="genero" value="masculino" id="masculino" checked>
+                <label for="masculino">Masculino</label>
+                
+                <input type="radio" name="genero" value="feminino" id="feminino">
+                <label for="feminino">Feminino</label> <br>
+
+                <select name="sala" id="sala" size="10">Notas da sala</select> <br>
+
+                <input type="button" value="ENVIAR" onclick="adicionar()">
+                <input type="button" value="FINALIZAR" onclick="finalizar()">
+
+            </form>
+        </div>
+        <div id="resultado">
+
+        </div>
+    </section>
+    <footer>
+        <p>Feito por alex</p>
+    </footer>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
