@@ -22,15 +22,15 @@
                 <input type="text" name="nome" id="nome" required> <br>
                 
                 <label for="nota1">Nota 1: </label> 
-                <input type="number" name="nota1" id="nota1" maxlength="2" max="10" min="0"required><br>
+                <input type="number" name="nota1" id="nota1" maxlength="2" max="10" min="0"required ><br>
                 <label for="nota2">Nota 2: </label> 
-                <input type="number" name="nota2" id="nota2" maxlength="2" max="10" min="0"required> <br>
+                <input type="number" name="nota2" id="nota2" maxlength="2" max="10" min="0"required > <br>
 
                 
-                <input type="radio" name="genero" value="masculino" id="masculino" checked>
-                <label for="masculino">Masculino</label>
-                
-                <input type="radio" name="genero" value="feminino" id="feminino">
+                <input type="radio" name="genero" value="1" id="masculino" checked>
+                <label for="masculino" >Masculino</label>
+                <!-- onchange="isGene()" <- POR ALGUM MOTIVO O onchange adicionava um valor extra no ARRAY feminino[]  -->
+                <input type="radio" name="genero" value="2" id="feminino"  >
                 <label for="feminino">Feminino</label> <br>
 
                 <select name="sala" id="sala" size="10">Notas da sala</select> <br>
