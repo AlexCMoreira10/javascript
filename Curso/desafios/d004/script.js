@@ -9,11 +9,13 @@ let notas1 = []
 let notas2 = []
 
 //Generos
-let masculino = 0 
+let masculino1 = 0 
+let masculino2 = 0
 let masculinoNota1 = []
 let masculinoNota2 = []
 
-let feminino = 0
+let feminino1 = 0
+let feminino2 = 0
 let femininoNota1 = []
 let femininoNota2 = []
 
@@ -91,10 +93,29 @@ OBS: FIZ PARA TREINAR PORÉM EU NÃO RECISO CRIAR OS ARRAYS DE NOTAS 1 E NEM DE 
  POIS ELES SE TORNAM REDUNDANTES JÁ QUE POSSO SIMPLESMENTE PEGAR OS ARRAYS MASC1 E FEMI1 E SOMA-LOS
 */
 function finalizar() {
+    let medH1 = 0
+    let medH2 = 0
+    let medM1 = 0
+    let medM2 = 0
     console.log(notas1)
     console.log(notas2)
-    console.log(`Media dos Homens Prova 1 : ${masculinoNota1}`)
-    console.log(`Media dos Mulheres Prova 1 : ${femininoNota1}`)
-    console.log(`Media dos Homens Prova 2 : ${masculinoNota2}`)
-    console.log(`Media dos Mulheres Prova 2 : ${femininoNota2}`)
+    for(let pos in femininoNota1) {
+        feminino1 += femininoNota1[pos]
+        feminino2 += femininoNota2[pos]
+    }
+
+    for(let pos in masculinoNota1) {
+        masculino1 += masculinoNota1[pos]
+        masculino2 += masculinoNota2[pos]
+    }
+    
+
+    medH1 = masculino1 / masculinoNota1.length
+    medH2 = masculino2 / masculinoNota2.length
+    medM1 = feminino1 / femininoNota1.length
+    medM2 = feminino2 / femininoNota2.length
+    console.log(`Media dos Homens Prova 1 : ${medH1}`)
+    console.log(`Media dos Mulheres Prova 1 : ${medM1}`)
+    console.log(`Media dos Homens Prova 2 : ${medH2}`)
+    console.log(`Media dos Mulheres Prova 2 : ${medM2}`)
 }
