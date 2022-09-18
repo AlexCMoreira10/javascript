@@ -37,6 +37,8 @@ function adicionar() {
         //Sexo e notas
         isGene(Number(nota1.value), Number(nota2.value))
 
+        //Maior nota
+
         //Criação de itens na section
         let item = document.createElement('option')
         item.text = `Aluno ${nome.value} a notas foram ${nota1.value} e ${nota2.value}`
@@ -57,6 +59,9 @@ function adicionar() {
     
 }
 
+function maiorNota() {
+    if()
+}
 
 function isName(n) {
     if(n == 0) {
@@ -97,8 +102,7 @@ function finalizar() {
     let medH2 = 0
     let medM1 = 0
     let medM2 = 0
-    console.log(notas1)
-    console.log(notas2)
+
     for(let pos in femininoNota1) {
         feminino1 += femininoNota1[pos]
         feminino2 += femininoNota2[pos]
@@ -109,13 +113,15 @@ function finalizar() {
         masculino2 += masculinoNota2[pos]
     }
     
-
+    //CACULOS DAS MEDIAS
     medH1 = masculino1 / masculinoNota1.length
     medH2 = masculino2 / masculinoNota2.length
     medM1 = feminino1 / femininoNota1.length
     medM2 = feminino2 / femininoNota2.length
-    console.log(`Media dos Homens Prova 1 : ${medH1}`)
-    console.log(`Media dos Mulheres Prova 1 : ${medM1}`)
-    console.log(`Media dos Homens Prova 2 : ${medH2}`)
-    console.log(`Media dos Mulheres Prova 2 : ${medM2}`)
+    
+    //RESULTADOS
+    resultado.innerHTML += `<p> Media dos Homens Prova 1 : ${medH1} </p>`
+    resultado.innerHTML += `<p> Media dos Mulheres Prova 1 : ${medM1} </p> `
+    resultado.innerHTML += `<p> Media dos Homens Prova 2 : ${medH2} </p> `
+    resultado.innerHTML += `<p> Media dos Mulheres Prova 2 : ${medM2} </p>`
 }
