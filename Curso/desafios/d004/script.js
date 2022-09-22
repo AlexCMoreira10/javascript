@@ -25,9 +25,19 @@ let res = document.getElementById('resultado')
 
 nome.focus()
 
+//Toda vez colocar um paramentro dentra da função tenho que passar esse parametro quando estiver chamando ela
+
+function saudacaoSecreta(texto_saudacao) {
+    window.alert(`${texto_saudacao}`)
+    
+}
+
 function adicionar() {
 
-    
+    saudacaoSecreta('Texto Puro')
+    var texto_dois = 'texto dentro de variavel'
+    saudacaoSecreta(texto_dois)
+
 
     if(!isName(nome.value) && !isNota(Number(nota1.value) , Number(nota2.value)) ) {
         //Notas
